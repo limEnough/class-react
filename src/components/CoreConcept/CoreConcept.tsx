@@ -1,7 +1,7 @@
-import { type ReactCoreConcept } from '../../data.ts';
+import { type CoreConcept } from '../../data.ts';
 import './CoreConcept.css';
 
-export default function CoreConcept({title, image, description}: ReactCoreConcept) {
+export default function CoreConcept({title, image, description}: CoreConcept) {
   return (
     <li>
       <img src={image} alt="이미지" />

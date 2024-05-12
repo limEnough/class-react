@@ -1,9 +1,10 @@
 // 이미지를 자바스크립트 변수로 불러와 사용한다.
 import reactImg from '/src/assets/react-core-concepts.png'
+import './Header.css';
 
 const reactDescriptions = ['Fundametal', 'Crucial', 'Core'];
 
-function genRandomInt(max) {
+function genRandomInt(max: number) {
   return Math.floor(Math.random() * (max + 1))
 }
 

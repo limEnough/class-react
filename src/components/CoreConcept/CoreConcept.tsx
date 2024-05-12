@@ -1,4 +1,5 @@
-import { type ReactCoreConcept } from '../data.ts';
+import { type ReactCoreConcept } from '../../data.ts';
+import './CoreConcept.css';
 
 export default function CoreConcept({title, image, description}: ReactCoreConcept) {
   return (

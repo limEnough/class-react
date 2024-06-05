@@ -1,13 +1,13 @@
 interface TabButtonProps {
   isSelected: boolean;
   label: string;
-  onSelect: () => void;
+  onClick?: () => void;
 }
 
-export default function TabButton({label, onSelect, isSelected}: TabButtonProps) {
+export default function TabButton({label, isSelected, ...props}: TabButtonProps) {
   return (
     <li>
-      <button onClick={onSelect} className={isSelected ? 'active' : ''}>{label}</button>
+      <button {...props} className={isSelected ? 'active' : ''}>{label}</button>
     </li>
   )
 }

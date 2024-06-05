@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CORE_CONCEPTS_CONTENTS } from "../data";
 import TabButton from "./TabButton";
+import Section from './Section';
 
 export default function Examples() {
   const [selectedTopic, setSelectedTopic ] = useState('');
@@ -29,19 +30,17 @@ export default function Examples() {
   }
 
   return (
-    <section id="examples">
-      <h2>Examples</h2>
-
+    <Section title="Examples" id="examples">
       <menu>
         {/* 컴포넌트 텍스트 사이에 있는 내용은 컴포넌트에서 props.children 으로 접근 가능 */}
         {/* <TabButton >Components</TabButton> */}
-        <TabButton isSelected={selectedTopic === 'components' } onSelect={() => handleSelect('components')} label="Components"></TabButton>
-        <TabButton isSelected={selectedTopic === 'jsx' } onSelect={() => handleSelect('jsx')} label="JSX"></TabButton>
-        <TabButton isSelected={selectedTopic === 'props' } onSelect={() => handleSelect('props')} label="Props"></TabButton>
-        <TabButton isSelected={selectedTopic === 'state' } onSelect={() => handleSelect('state')} label="State"></TabButton>
+        <TabButton isSelected={selectedTopic === 'components' } onClick={() => handleSelect('components')} label="Components"></TabButton>
+        <TabButton isSelected={selectedTopic === 'jsx' } onClick={() => handleSelect('jsx')} label="JSX"></TabButton>
+        <TabButton isSelected={selectedTopic === 'props' } onClick={() => handleSelect('props')} label="Props"></TabButton>
+        <TabButton isSelected={selectedTopic === 'state' } onClick={() => handleSelect('state')} label="State"></TabButton>
       </menu>
         
       <div id="tab-content">{tabContent}</div>
-    </section>
+    </Section>
   )
 }

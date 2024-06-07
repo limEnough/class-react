@@ -6,8 +6,6 @@ interface TabButtonProps {
 
 export default function TabButton({label, isSelected, ...props}: TabButtonProps) {
   return (
-    <li>
-      <button {...props} className={isSelected ? 'active' : ''}>{label}</button>
-    </li>
+    <button {...props} className={isSelected ? 'active' : ''}>{label}</button>
   )
 }
